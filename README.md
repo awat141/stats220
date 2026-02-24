@@ -8,4 +8,4 @@ A little about me:
 - I am taking STATS 220 because Its one of the few science courses outside of my major that seemed somewhat interesting.
 - I am interested in learning about statistics prefferably. Other topics are optional.
 
-A meme that captures how I currently feel about my university studies is ![](https://tenor.com/view/when-the-semester-just-started-college-pain-university-pain-college-presentation-college-assignment-gif-17589790717723781346)
+A meme that captures how I currently feel about my university studies is ![](https://c.tenor.com/8druEACXtX8AAAAd/tenor.gif)
