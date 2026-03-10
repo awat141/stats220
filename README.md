@@ -1,6 +1,6 @@
 # stats220
 
-##This## #is# 'my' repo for STATS 220. 
+This is my repo for STATS 220. 
 
 A little about me:
 
@@ -9,3 +9,7 @@ A little about me:
 - I am interested in learning about statistics prefferably. Other topics are optional.
 
 A meme that captures how I currently feel about my university studies is ![](https://c.tenor.com/8druEACXtX8AAAAd/tenor.gif)
+
+I just love **Bold Text**
+I have a similar love for *Italic Text*
+sadly I have mixed feelings about #smaller headers
