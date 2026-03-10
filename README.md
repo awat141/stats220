@@ -23,4 +23,4 @@ sadly I have mixed feelings about
 
 https://www.istockphoto.com/photos/funny-cat-hiding
 
-![](https://tenor.com/j9Vm0KBGg2k.gif)
+![Alt Text]((https://tenor.com/j9Vm0KBGg2k.gif)
