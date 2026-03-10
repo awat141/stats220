@@ -10,7 +10,7 @@ A little about me:
 * I am interested in learning about statistics prefferably. Other topics are optional.
 * I needed a fourth list member
   
-A meme that captures how I currently feel about my university studies is ![](https://c.tenor.com/8druEACXtX8AAAAd/tenor.gif)
+A meme that captures how I currently feel about my university studies is redacted
 
 I just love **Bold Text**.
 
