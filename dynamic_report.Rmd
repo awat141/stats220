@@ -7,13 +7,11 @@ output: html_fragment
 knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
 library(tidyverse)
 ```
-<style>
+
+```{css}
 body {
   font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
-</style>
-```{css}
-
 ```
 
 ## Data summarising meals made by flatmates
