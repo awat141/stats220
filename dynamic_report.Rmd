@@ -27,17 +27,21 @@ The data recorded includes:
 ```{r}
 #imports
 suppressPackageStartupMessages(library(tidyverse))
-suppressPackageStartupMessages(library(ggplot2))
-suppressPackageStartupMessages(library(dplyr))
+
 
 #read csv and rename question data accordingly
-logged_data <- read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vRVqfjnKAUWI1iT1YIqdaNRSAdqeAqdLRyQ_qwa2SMmcIjCyxhQmP4LMAf1-P1d9a5wB4WZmLO3B9KU/pub?output=csv") %>%
-  rename(flatmate_id = 2,
-         time_frame = 3,
-         veg_quantity = 4,
-         cooking_method = 5,
-         appeal = 6,
-         Recipe = 7)
+logged_data <- read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vRVqfjnKAUWI1iT1YIqdaNRSAdqeAqdLRyQ_qwa2SMmcIjCyxhQmP4LMAf1-P1d9a5wB4WZmLO3B9KU/pub?output=csv")
+
+#rename columns ( rename function didnt work with github so am trying this)
+colnames(logged_data) <- c(
+  "timestamp",
+  "flatmate_id",
+  "time_frame",
+  "veg_quantity",
+  "cooking_method",
+  "appeal",
+  "Recipe"
+)
 
 #Find the mean and max value for vegetables used.
 mean_var_veg <- mean(logged_data$veg_quantity, na.rm = TRUE)
