@@ -1,0 +1,91 @@
+---
+title: My dynamic report
+output: html_fragment
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
+
+```
+
+```{css}
+
+```
+
+## Data summarising meals made by flatmates
+
+I recorded the meals made by flatmates over multiple days.
+The data recorded includes:
+
+* What time of day the meals were made
+* Which flatmates made the meals
+* How many vegetables were included in said meals
+* What cooking appliances were used for the meals
+* how appealing the meals were
+* if a recipe was used or not.
+
+```{r}
+#imports
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages(library(dplyr))
+
+#read csv and rename question data accordingly
+logged_data <- read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vRVqfjnKAUWI1iT1YIqdaNRSAdqeAqdLRyQ_qwa2SMmcIjCyxhQmP4LMAf1-P1d9a5wB4WZmLO3B9KU/pub?output=csv") %>%
+  rename(flatmate_id = 2,
+         time_frame = 3,
+         veg_quantity = 4,
+         cooking_method = 5,
+         appeal = 6,
+         Recipe = 7)
+
+#Find the mean and max value for vegetables used.
+mean_var_veg <- mean(logged_data$veg_quantity, na.rm = TRUE)
+max_var_veg  <- max(logged_data$veg_quantity, na.rm = TRUE)
+
+#find the mean value of the appeal of the meals
+mean_var_appeal <- mean(logged_data$appeal, na.rm = TRUE)
+
+```
+
+The mean number of vegetables used throughout all recorded meals is  `r mean_var_veg` 
+and the highest recorded vegetable sighting is `r max_var_veg` .
+
+The average (Mean) appeal of all recorded meals is `r mean_var_appeal` .
+
+
+
+The following Bar chart displays how often each cooking appliance was used for the recorded meals.
+As shown, it was most common for no heating appliance to be used at all.
+and the least commonly used appliance was the oven
+
+```{r}
+#bar chart for cooking implementation
+logged_data %>%
+  ggplot() +
+  geom_bar(aes(x = cooking_method)) +
+  labs(title = "Flatmates Cooking judgement",
+       subtitle = "Comparing how often different cooking appliances were used by flatmates.",
+       caption = "Source: My personal observation of flatmates",
+       x = "Appliance",
+       y = "Number of Uses")
+```
+
+
+
+
+The following bar chart shows how often flatmates were seen making meals.
+as shown in the chart, the amount of meals made in the midday and evening was even. however the amount of meals made in the morning fell behind.
+
+```{r}
+#bar chart for Time Frame
+logged_data %>%
+  ggplot() +
+  geom_bar(aes(x = time_frame)) +
+  labs(title = "Comparison of what times meals were made",
+       subtitle = "Comparing how often flatmates made meals at specific times of day",
+       caption = "Source: My personal observation of flatmates",
+       x = "Time of day",
+       y = "number of meals")
+```
+
